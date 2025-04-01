@@ -41,8 +41,8 @@ tools:
       en: Create VS Code Workspace
       de: VS Code Workspace erzeugen
     icons:
-      small: CreateVisualStudioCodeWorkspace_24.png
-      large: CreateVisualStudioCodeWorkspace_128.png
+      small: allplan_gmbh\pythonparts_sdk\CreateVisualStudioCodeWorkspace_24.png
+      large: allplan_gmbh\pythonparts_sdk\CreateVisualStudioCodeWorkspace_128.png
   - id: download-pythonpart-examples
     pyp: Allplan GmbH\PythonParts SDK\DownloadPythonPartExamples.pyp
     display-name:
