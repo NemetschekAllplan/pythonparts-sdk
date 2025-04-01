@@ -1,0 +1,5 @@
+CreateVisualStudioCodeWorkspace = Visual Studio Code munkaterület létrehozása
+DownloadPythonPartExamples = PythonPart példák letöltése
+EncryptPythonPartScript = PythonPart szkript titkosítása
+InstallPythonPackage = Python csomag telepítése
+StartPythonDebug = Python hibakeresés indítása

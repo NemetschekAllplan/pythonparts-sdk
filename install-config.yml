@@ -1,0 +1,67 @@
+plugin:
+  name: PythonParts SDK
+  UUID: b8b5051d-bade-4ea6-961b-f6d9129ba6cf
+  version: 2.0.0
+  developer: allplan_gmbh
+  default-language: en
+  min-allplan-version: 2026
+
+installation:
+  target-location: USR
+  py-packages: requirements.in
+
+tools:
+  - id: start-python-debug
+    pyp: Allplan GmbH\PythonParts SDK\StartPythonDebug.pyp
+    display-name:
+      en: Start Python Debug
+      de: Python Debug starten
+    icons:
+      small: allplan_gmbh\pythonparts_sdk\StartPythonDebug_24.png
+      large: allplan_gmbh\pythonparts_sdk\StartPythonDebug_128.png
+  - id: install-python-package
+    pyp: Allplan GmbH\PythonParts SDK\InstallPythonPackage.pyp
+    display-name:
+      en: Install Python Package
+      de: Python Package installieren
+    icons:
+      small: allplan_gmbh\pythonparts_sdk\InstallPythonPackage_24.png
+      large: allplan_gmbh\pythonparts_sdk\InstallPythonPackage_128.png
+  - id: encrypt-pythonpart-script 
+    pyp: Allplan GmbH\PythonParts SDK\EncryptPythonPartScript.pyp
+    display-name:
+      en: Encrypt PythonPart Script
+      de: PythonPart Skript verschlüsseln
+    icons:
+      small: allplan_gmbh\pythonparts_sdk\EncryptPythonPartScript_24.png
+      large: allplan_gmbh\pythonparts_sdk\EncryptPythonPartScript_128.png
+  - id: create-vscode-workspace
+    pyp: Allplan GmbH\PythonParts SDK\CreateVisualStudioCodeWorkspace.pyp
+    display-name:
+      en: Create VS Code Workspace
+      de: VS Code Workspace erzeugen
+    icons:
+      small: CreateVisualStudioCodeWorkspace_24.png
+      large: CreateVisualStudioCodeWorkspace_128.png
+  - id: download-pythonpart-examples
+    pyp: Allplan GmbH\PythonParts SDK\DownloadPythonPartExamples.pyp
+    display-name:
+      en: Download PythonPart Examples
+      de: PythonPart Beispiele herunterladen
+    icons:
+      small: allplan_gmbh\pythonparts_sdk\DownloadPythonPartExamples_24.png
+      large: allplan_gmbh\pythonparts_sdk\DownloadPythonPartExamples_128.png
+
+task-area:
+  display-name:
+    en: PythonPart SDK
+    de: PythonPart SDK
+  layout:
+    - start-python-debug
+    - "****"
+    - create-vscode-workspace
+    - ----
+    - install-python-package
+    - download-pythonpart-examples
+    - ----
+    - encrypt-pythonpart-script
