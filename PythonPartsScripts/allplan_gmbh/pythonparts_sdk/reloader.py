@@ -235,7 +235,7 @@ def _import(name    : str,
 
             #------------- relative import with "from .import xxx"
 
-            elif str_m.startswith("<module") and str_m.endswith(" (namespace)>"):
+            elif str_m.startswith("<module") and " (namespace)" in str_m:
                 for attr_name in dir(mod):
                     attr = getattr(mod, attr_name, None)
 

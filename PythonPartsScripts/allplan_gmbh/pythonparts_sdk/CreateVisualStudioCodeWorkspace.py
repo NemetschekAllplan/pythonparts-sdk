@@ -1,17 +1,13 @@
 ﻿"""Creating a workspace for Visual Studio Code"""
 
-import os
-
-import tkinter as tk
-
-from tkinter import filedialog
 import codecs
+import os
+import tkinter as tk
+from tkinter import filedialog
 
 import NemAll_Python_AllplanSettings as AllplanSettings
 import NemAll_Python_IFW_Input as AllplanIFW
 import NemAll_Python_Utility as AllplanUtil
-
-
 from BuildingElementPaletteService import BuildingElementPaletteService
 
 print('Load CreateVisualStudioCodeWorkspace.py')
@@ -113,10 +109,10 @@ class CreateWorkspace():
         file_name = self.build_ele_list[0].FileButton.value
 
         if self.build_ele_list[0].FileButton.value in {None, "", "Select Folder"}:
-            return False 
-        
+            return False
+
         self.is_created = True
-        
+
         #Remove extension
         file_name, _ = os.path.splitext(file_name)
         file_name = file_name + ".code-workspace"
@@ -154,7 +150,7 @@ class CreateWorkspace():
     ],
     "settings": {
         "python.languageServer":"Pylance",'''
-        
+
         text += '''
             "pylint.args": ["--rcfile=$etc$PythonPartsFramework\\\\pylintrc"],'''
 
@@ -211,13 +207,14 @@ class CreateWorkspace():
         "files.trimTrailingWhitespace": true,
         "python.analysis.stubPath": "$etc$PythonPartsFramework\\\\InterfaceStubs",
     },
-            
+
     "extensions": {
         "recommendations": [
             "ms-python.python",
             "ms-python.pylint",
             "Allplan.PythonPartTools",
             "chouzz.vscode-better-align",
+            "redhat.vscode-xml",
         ]
     },
     "launch": {
@@ -257,7 +254,7 @@ class CreateWorkspace():
         AllplanUtil.ShowMessageBox("Workspace created Successfully", AllplanUtil.MB_OK)
         if not self.build_ele_list[0].UsePylint.value:
             return
-        
+
 
 
     def process_mouse_msg(self, _mouse_msg, _pnt, _msg_info):

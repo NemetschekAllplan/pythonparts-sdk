@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Element>
     <Script>
-        <Name>allplan-gmbh\pythonparts-sdk\CreateVisualStudioCodeWorkspace.py</Name>
+        <Name>allplan_gmbh\pythonparts_sdk\CreateVisualStudioCodeWorkspace.py</Name>
         <Title>Visual Studio Code workspace</Title>
         <Version>1.0</Version>
         <Interactor>True</Interactor>
@@ -9,7 +9,7 @@
     <Page>
         <Name>Page1</Name>
         <Text>Visual Studio Code workspace</Text>
-        
+
         <Parameter>
             <Name>Save Location</Name>
             <Text>Save workspace file as</Text>
@@ -23,7 +23,7 @@
                 <FileFilter>Workspace files (*.code-workspace)|*.code-workspace|</FileFilter>
             </Parameter>
         </Parameter>
-    
+
         <Parameter>
             <Name>AddNodeVisualScripts</Name>
             <Text>Add VisualScripts</Text>
