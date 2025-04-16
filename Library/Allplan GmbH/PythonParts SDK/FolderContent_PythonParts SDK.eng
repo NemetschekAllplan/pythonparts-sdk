@@ -1,0 +1,5 @@
+CreateVisualStudioCodeWorkspace = Create Visual Studio Code workspace
+DownloadPythonPartExamples = Download PythonPart examples
+EncryptPythonPartScript = Encrypt PythonPart script
+InstallPythonPackage = Install python package
+StartPythonDebug = Start python debug
