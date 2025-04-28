@@ -7,13 +7,10 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     permissions:
       contents: write
     steps:
-      - name: Configure Git to preserve CRLF
-        run: git config --global core.autocrlf false
-
       - name: Checkout repository
         uses: actions/checkout@v3
 
@@ -28,9 +25,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          tag="${GITHUB_REF#refs/tags/}"
+          $tag = "${{ github.ref_name }}"
 
-          gh release create "$tag" \
-            --title="$tag" \
-            --draft \
+          gh release create "$tag" `
+            --title="$tag" `
+            --draft `
             PythonPartsSDK.allep
